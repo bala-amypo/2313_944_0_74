@@ -34,8 +34,11 @@ public class Studentcontroller {
     }
     @PutMapping
     public Studententity updatedata(@PathVariable int id,@RequestBody Studententity st){
-        return src.update(id,st)
+        return src.update(id,st);
     }
+    @DeleteMapping
+    public  deletedata(@PathVariable int id){
 
+    }
 
 }
