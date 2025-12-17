@@ -1,4 +1,4 @@
-package com.example.demo.Controller;
+package com.example.demo.controller;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ import com.example.demo.Services.Studentservices;
 @RestController
 public class Studentcontroller {
     @Autowired
-    Studentservice src;
+    Studentservices src;
     @PostMapping("/post")
     public Studententity postdata(@RequestBody Studententity st) {
         return src.savedata(st);
