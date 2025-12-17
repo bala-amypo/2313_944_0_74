@@ -1,6 +1,6 @@
 package com.example.demo.entity;
 
-import java.time.LocalDate;
+import jakarta.
 
 
 public class Studententity {
@@ -9,6 +9,8 @@ public class Studententity {
     private Long id;
     @NotBlank(message= "should not contain spaces")
     private  String name;
+     @NotBlank(message= "no blank allowed")
+     @Email(message="invalid format")
     @Column(name=unique)
     private String email;
     private String password;
