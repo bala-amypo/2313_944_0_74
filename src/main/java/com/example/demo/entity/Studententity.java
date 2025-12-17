@@ -1,6 +1,6 @@
 package com.example.demo.entity;
 
-import jakarta.
+import jakarta.persistence.*;
 
 
 public class Studententity {
@@ -9,8 +9,8 @@ public class Studententity {
     private Long id;
     @NotBlank(message= "should not contain spaces")
     private  String name;
-     @NotBlank(message= "no blank allowed")
-     @Email(message="invalid format")
+    @NotBlank(message= "no blank allowed")
+    @Email(message="invalid format")
     @Column(name=unique)
     private String email;
     private String password;
