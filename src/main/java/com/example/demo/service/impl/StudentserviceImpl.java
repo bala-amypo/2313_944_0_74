@@ -14,8 +14,8 @@ public class Studentserviceimpl implements Studentservices{
         return rep.save(st);
     }
     @Override
-    public Studententity getdata(){
-        return rep.();
+    public List<Studententity> getdata(){
+        return rep.findAll();
     }
     @Override
     public Studententity getIdValue(Long id){
@@ -23,6 +23,9 @@ public class Studentserviceimpl implements Studentservices{
     }
     @Override
     public Studententity update(Studententity st,Long id){
+        Studententity hav=getIdValue(id);
+        hav.setName(Studententity.getName);
+        
         return rep.();
     }
     @Override
