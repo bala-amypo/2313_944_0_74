@@ -28,10 +28,10 @@ public class Studentcontroller {
         return src.retdata();
     }
 
-    // @GetMapping("/getid/{id}")
-    // public Studententity getIdValue(@PathVariable int id){
-    //     return src.retIdvalue(id);
-    // }
+    @GetMapping("/getid/{id}")
+    public Studententity getIdValue(@PathVariable int id){
+        return src.retIdvalue(id);
+    }
 
 
 
