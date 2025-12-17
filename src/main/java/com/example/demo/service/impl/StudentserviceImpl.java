@@ -1,2 +1,3 @@
-package com.example.demo.service.Studentservices;
+package com.example.demo.service;
+public interface 
 
