@@ -1,6 +1,8 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 
@@ -16,13 +18,6 @@ public class Studententity {
     private String email;
     private String password;
     private String role;
-    public Studententity(Long id, String name, String email, String password, String role) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.password = password;
-        this.role = role;
-    }
     public Long getId() {
         return id;
     }
@@ -47,13 +42,24 @@ public class Studententity {
     public void setPassword(String password) {
         this.password = password;
     }
+    
     public String getRole() {
         return role;
-    }
-    public Studententity() {
     }
     public void setRole(String role) {
         this.role = role;
     }
     
+    public Studententity(Long id, @NotBlank(message = "should not contain spaces") String name,
+            @NotBlank(message = "no blank allowed") @Email(message = "invalid format") String email, String password,
+            String role) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.role = role;
     }
+    public Studententity() {
+    }
+    
+}
