@@ -25,11 +25,11 @@ public class Studentserviceimpl implements Studentservices{
     public Studententity update(Studententity st,Long id){
         Studententity hav=getIdValue(id);
         hav.setName(Studententity.getName);
-        
-        return rep.();
+        hav.setEmail(Studententity.getEmail);
+        return rep.save(hav);
     }
     @Override
     public void delete(Long id){
-        return rep.();
+        return rep.save();
     }
 }
