@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.Entity.Studententity;
-import com.example.demo.Services.Studentservices;
+import com.example.demo.entity.Studententity;
+import com.example.demo.service.Studentservices;
 
 @RestController
 public class Studentcontroller {
