@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Studententity {
       private  String name;
-        private int roll;
+        private int id;
         private LocalDate dOB;
         private Float cGPA;
         public String getName() {
@@ -13,10 +13,10 @@ public class Studententity {
         public void setName(String name) {
            this. name = name;
         }
-        public int getRoll() {
+        public int getid() {
             return roll;
         }
-        public void setRoll(int roll) {
+        public void setid(int roll) {
             this.roll = roll;
         }
         public LocalDate getDOB() {
@@ -31,9 +31,9 @@ public class Studententity {
         public void setCGPA(Float cGPA) {
            this. cGPA = cGPA;
         }
-        public Studententity(String name, int roll, LocalDate dOB, Float cGPA) {
+        public Studententity(String name, int id, LocalDate dOB, Float cGPA) {
            this. name = name;
-            this.roll = roll; 
+            this.id = id; 
            this. dOB = dOB;
             this.cGPA = cGPA;
         }
