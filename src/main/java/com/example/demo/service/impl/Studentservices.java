@@ -7,5 +7,5 @@ public interface Studentservices{
     Studententity getIdValue(Long id);
    // Optional<Studententity> getOneStudent(Long id);
    Studententity update(Long id,Studententity st);
-    void delete(Long id);
+    void delete(Long id); 
 }
