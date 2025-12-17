@@ -5,7 +5,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
-
+@Table(name="Student")
 public class Studententity {
     @Id
     @Generatedvalue(strategy=GenerationType.IDENTITY);
