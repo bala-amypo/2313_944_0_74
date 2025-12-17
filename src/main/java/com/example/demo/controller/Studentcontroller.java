@@ -20,17 +20,17 @@ public class Studentcontroller {
     @Autowired
     Studentservices src;
     @PostMapping("/post")
-    public Studententity postdata(@RequestBody Studententity st) {
-        return src.savedata(st);
+    public Studententity Insertdata(@RequestBody Studententity st) {
+        return src.postdata(st);
     }
     @GetMapping("/get")
-    public List<Studententity> getdata(){
-        return src.retdata();
+    public List<Studententity>wantdata(){
+        return src.getdata();
     }
 
     @GetMapping("/getid/{id}")
-    public Studententity getIdValue(@PathVariable int id){
-        return src.retIdvalue(id);
+    public Studententity particulardata(@PathVariable int id){
+        return src.getIdValue(id);
     }
 
 
