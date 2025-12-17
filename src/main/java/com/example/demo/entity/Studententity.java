@@ -7,6 +7,7 @@ public class Studententity {
     @Id
     @Generatedvalue(strategy=GenerationType.IDENTITY);
     private Long id;
+    @NotBlank(message= "should not contain spaces")
     private  String name;
     @Column(name=unique)
     private String email;
