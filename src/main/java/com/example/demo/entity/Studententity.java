@@ -4,7 +4,9 @@ import java.time.LocalDate;
 
 public class Studententity {
       private  String name;
-        private int id;
+        @id
+        @Generatedvalue(strategy=GenerationType.IDENTITY)
+        private Long  id;
         private LocalDate dOB;
         private Float cGPA;
         public String getName() {
