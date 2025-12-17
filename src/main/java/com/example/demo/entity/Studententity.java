@@ -11,6 +11,7 @@ public class Studententity {
     @Generatedvalue(strategy=GenerationType.IDENTITY);
     private Long id;
     @NotBlank(message= "should not contain spaces")
+    @Column(unique=true)
     private  String name;
     @NotBlank(message= "no blank allowed")
     @Email(message="invalid format")
