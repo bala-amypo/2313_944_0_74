@@ -9,16 +9,24 @@ public class Studentserviceimpl implements Studentservices{
     public Studentserviceimpl(StudentRepo rep){
         this.rep=rep;
     }
-    @override
+    @Override
     public Studententity postdata(Studententity st){
         return rep.save(st);
     }
-    @override
+    @Override
     public Studententity getdata(){
         return rep.();
     }
-    @override
-    public Studententity getIdValue(long id){
-        return rep.()
+    @Override
+    public Studententity getIdValue(Long id){
+        return rep.findById();
+    }
+    @Override
+    public Studententity update(Studententity st,Long id){
+        return rep.();
+    }
+    @Override
+    public void delete(Long id){
+        return rep.();
     }
 }
