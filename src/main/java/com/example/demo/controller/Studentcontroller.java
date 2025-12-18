@@ -13,7 +13,7 @@ public class Studentcontroller {
 
     private final Studentservices src;
 
-    // ✅ Constructor Injection (CORRECT)
+   
     public Studentcontroller(Studentservices src) {
         this.src = src;
     }
@@ -41,7 +41,6 @@ public class Studentcontroller {
 
     @DeleteMapping("/{id}")
     public void deleteData(@PathVariable Long id) {
-    src.delete(id);   // ✅ FIXED spelling
-}
+    src.delete(id);   
 
 }
