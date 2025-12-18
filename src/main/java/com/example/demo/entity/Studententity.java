@@ -8,7 +8,7 @@ import jakarta.validation.constraints.NotBlank;
 @Table(name="Student")
 public class Studententity {
     @Id
-    @Generatedvalue(strategy=GenerationType.IDENTITY);
+    @Generatedvalue(strategy=GenerationType.IDENTITY)
     private Long id;
     @NotBlank(message= "should not contain spaces")
     @Column(unique=true)
