@@ -37,8 +37,8 @@ public class Studentcontroller {
         return src.update(id,st);
     }
     @DeleteMapping
-    public  deletedata(@PathVariable int id){
-
+    public void  deletedata(@PathVariable int id){
+            src.delte(id);
     }
 
 }
