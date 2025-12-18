@@ -1,17 +1,19 @@
 package com.example.demo.controller;
 
 import java.util.List;
+
 import org.springframework.web.bind.annotation.*;
-import com.example.demo.entity.Studententity; // Changed from .entity to .model per usual standards
+
+import com.example.demo.entity.Studententity;
 import com.example.demo.service.Studentservices;
 
 @RestController
-@RequestMapping("/api/students") // Good practice to have a base path
+@RequestMapping("/api/students")
 public class Studentcontroller {
 
     private final Studentservices src;
-    @Autowired Studentservices
-    // Requirement: Constructor Injection (No @Autowired on fields)
+
+    // ✅ Constructor Injection (CORRECT)
     public Studentcontroller(Studentservices src) {
         this.src = src;
     }
@@ -27,16 +29,17 @@ public class Studentcontroller {
     }
 
     @GetMapping("/getid/{id}")
-    public Studententity particularData(@PathVariable Long id) { // Note: PKs in your prompt were 'Long'
+    public Studententity particularData(@PathVariable Long id) {
         return src.getIdValue(id);
     }
 
-    @PutMapping("/{id}") // Fixed: Added path variable to mapping
-    public Studententity updateData(@PathVariable Long id, @RequestBody Studententity st) {
+    @PutMapping("/{id}")
+    public Studententity updateData(@PathVariable Long id,
+                                    @RequestBody Studententity st) {
         return src.update(id, st);
     }
 
-    @DeleteMapping("/{id}") // Fixed: Added path variable to mapping
+    @DeleteMapping("/{id}")
     public void deleteData(@PathVariable Long id) {
         src.delte(id);
     }
