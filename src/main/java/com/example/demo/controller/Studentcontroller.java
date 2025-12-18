@@ -41,6 +41,7 @@ public class Studentcontroller {
 
     @DeleteMapping("/{id}")
     public void deleteData(@PathVariable Long id) {
-        src.delte(id);
-    }
+    src.delete(id);   // ✅ FIXED spelling
+}
+
 }
