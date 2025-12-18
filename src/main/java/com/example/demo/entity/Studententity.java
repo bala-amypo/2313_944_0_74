@@ -26,11 +26,11 @@ public class Studententity {
 
     private String role;
 
-    // ✅ No-arg constructor (required by JPA)
+   
     public Studententity() {
     }
 
-    // ✅ Parameterized constructor
+    
     public Studententity(Long id, String name, String email, String password, String role) {
         this.id = id;
         this.name = name;
@@ -39,7 +39,6 @@ public class Studententity {
         this.role = role;
     }
 
-    // ✅ Getters and Setters
     public Long getId() {
         return id;
     }
